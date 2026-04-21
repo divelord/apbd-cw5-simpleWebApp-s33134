@@ -1,20 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿namespace SimpleWebApplication.Models;
 
-namespace SimpleWebApplication.DTOs;
-
-public class CreateRoomDto
+public class Room
 {
-    [Required]
-    [StringLength(32)]
-    [MinLength(3)]
+    public int Id { get; set; }
     public string Name { get; set; } = string.Empty;
-    [Required]
     public string BuildingCode { get; set; } = string.Empty;
-    [Required]
-    [Range(0, 5)]
     public int Floor { get; set; }
-    [Required]
-    [Range(1, 300)]
     public int Capacity { get; set; }
     public bool HasProjector { get; set; }
     public bool IsActive { get; set; }
